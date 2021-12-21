@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API based Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>WHAT DOES YOUR NAME SAYS ABOUT YOUR AVATAR?</h1>
+        <div class="centerDiv">
+            <div class="details">
+
+                <label for="name">Enter your name</label><br>
+                <input type="text" name="namef" id="nameid"><br><br>
+
+                <div class="imagclass">
+                    <img src="img1.jpg" alt="welcomepic" width=200 height=200 class="imgch">
+                </div>
+                <br>
+                <button>Click me</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                const username = $('#nameid').val();
+
+                $('.imgch').attr('src', ` https://joeschmoe.io/api/v1/${username}`);
+
+            })
+        })
+    </script>
+</body>
+
+</html>
